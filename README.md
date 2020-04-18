@@ -2,6 +2,14 @@
 
 [Rust 🦀 and WebAssembly 🕸 book](https://rustwasm.github.io/docs/book/)
 
+### Build and run with DWARF debug information
+
+```
+wasm-pack build --dev
+cd www
+npm run start
+```
+
 ### 🛠️ Build with `wasm-pack build`
 
 ```
