@@ -7,6 +7,7 @@
 ```
 wasm-pack build --dev
 cd www
+npm install
 npm run start
 ```
 
