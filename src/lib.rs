@@ -21,7 +21,7 @@ pub enum Cell {
 pub struct Universe {
     width: u32,
     height: u32,
-    cells: Vec<Cell>
+    cells: Vec<Cell>,
 }
 
 impl Universe {
@@ -52,7 +52,7 @@ impl Universe {
         &self.cells
     }
 
-    pub fn set_cells(&mut self, cells: &[(u32, u32)] ) {
+    pub fn set_cells(&mut self, cells: &[(u32, u32)]) {
         for (row, col) in cells.iter().cloned() {
             let idx = self.get_index(row, col);
             self.cells[idx] = Cell::Alive;
@@ -123,7 +123,7 @@ impl Universe {
                     (Cell::Alive, 2) | (Cell::Alive, 3) => Cell::Alive,
                     (Cell::Alive, x) if x > 3 => Cell::Dead,
                     (Cell::Dead, 3) => Cell::Alive,
-                    (otherwise, _) => otherwise
+                    (otherwise, _) => otherwise,
                 };
 
                 next[idx] = next_cell;
